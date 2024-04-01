@@ -4,30 +4,23 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MaterialPage from "./components/palettePages/materialPage";
-import FlatPage from "./components/palettePages/flatPage"
-import DutchPage from "./components/palettePages/dutchPage"
-import AmericanPage from "./components/palettePages/americanPage"
-import AusiePage from "./components/palettePages/ausiePage"
-import BritishPage from "./components/palettePages/britishPage"
-import SpanishPage from "./components/palettePages/spanishPage"
-import IndianPage from "./components/palettePages/indianPage"
-import FrenchPage from "./components/palettePages/frenchPage"
+import PalettePage from "./components/palettePages/palettePage";
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route exact path="/" element={<App />} />
-        <Route path="/materialUIcolor" element={<MaterialPage />} />
-        <Route path="/flatUIcolor" element={<FlatPage/>}/>
-        <Route path="/dutchUIcolor" element={<DutchPage/>}/>
-        <Route path="/americanUIcolor" element={<AmericanPage/>}/>
-        <Route path="/ausieUIcolor" element={<AusiePage/>}/>
-        <Route path="/britishUIcolor" element={<BritishPage/>}/>
-        <Route path="/spanishUIcolor" element={<SpanishPage/>}/>
-        <Route path="/indianUIcolor" element={<IndianPage/>}/>
-        <Route path="/frenchUIcolor" element={<FrenchPage/>}/>
+        <Route path="/materialUIcolor" element={<PalettePage paletteName="Material UI Colors" />} />
+        <Route path="/flatUIcolor" element={<PalettePage paletteName="Flat UI Colors v1" />}/>
+        <Route path="/dutchUIcolor" element={<PalettePage paletteName="Flat UI Colors Dutch" />}/>
+        <Route path="/americanUIcolor" element={<PalettePage paletteName="Flat UI Colors American" />}/>
+        <Route path="/aussieUIcolor" element={<PalettePage paletteName="Flat UI Colors Aussie" />}/>
+        <Route path="/britishUIcolor" element={<PalettePage paletteName="Flat UI Colors British" />}/>
+        <Route path="/spanishUIcolor" element={<PalettePage paletteName="Flat UI Colors Spanish" />}/>
+        <Route path="/indianUIcolor" element={<PalettePage paletteName="Flat UI Colors Indian" />}/>
+        <Route path="/frenchUIcolor" element={<PalettePage paletteName="Flat UI Colors French" />}/>
 
       </Routes>
     </Router>

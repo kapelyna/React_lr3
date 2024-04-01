@@ -1,14 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './App.css';
-import FlatUIColors from "./components/paletteIcons/flatUIColors"
-import MaterialUIColor from "./components/paletteIcons/materialUIColor"
-import AussieUIColor from "./components/paletteIcons/aussieUIColor"
-import DutchUIColor from "./components/paletteIcons/dutchUIColor"
-import AmericanUIColor from "./components/paletteIcons/americanUIColor"
-import BritishUIColor from "./components/paletteIcons/britishUIColor"
-import SpanishUIColor from "./components/paletteIcons/spanishUIColor"
-import IndianUIColor from "./components/paletteIcons/indianUIColor"
-import FrenchUIColor from "./components/paletteIcons/frenchUIColor"
+import PaletteUIColor from "./components/paletteIcons/paletteUIColor"
+
 
 
 function App() {
@@ -46,15 +39,15 @@ function App() {
         justifyContent: 'center',  
         alignItems: 'center',        
       }}>
-        <NavLink to="/materialUIcolor"><MaterialUIColor/></NavLink>
-        <NavLink to="/flatUIcolor"><FlatUIColors/></NavLink>
-        <NavLink to="/dutchUIcolor"><DutchUIColor/></NavLink>
-        <NavLink to="/americanUIcolor"><AmericanUIColor/></NavLink>
-        <NavLink to="/ausieUIcolor"><AussieUIColor/></NavLink>
-        <NavLink to="/britishUIcolor"><BritishUIColor/></NavLink>
-        <NavLink to="/spanishUIcolor"><SpanishUIColor/></NavLink>
-        <NavLink to="/indianUIcolor"><IndianUIColor/></NavLink>     
-        <NavLink to="/frenchUIcolor"><FrenchUIColor/></NavLink>   
+        <NavLink to="/materialUIColor"><PaletteUIColor paletteName="Material UI Colors"/></NavLink>
+        <NavLink to="/flatUIcolor"><PaletteUIColor paletteName="Flat UI Colors v1"/></NavLink>
+        <NavLink to="/dutchUIcolor"><PaletteUIColor paletteName="Flat UI Colors Dutch"/></NavLink>
+        <NavLink to="/americanUIcolor"><PaletteUIColor paletteName="Flat UI Colors American"/></NavLink>
+        <NavLink to="/aussieUIcolor"><PaletteUIColor paletteName="Flat UI Colors Aussie"/></NavLink>
+        <NavLink to="/britishUIcolor"><PaletteUIColor paletteName="Flat UI Colors British"/></NavLink>
+        <NavLink to="/spanishUIcolor"><PaletteUIColor paletteName="Flat UI Colors Spanish"/></NavLink>
+        <NavLink to="/indianUIcolor"><PaletteUIColor paletteName="Flat UI Colors Indian"/></NavLink>     
+        <NavLink to="/frenchUIcolor"><PaletteUIColor paletteName="Flat UI Colors French"/></NavLink>   
         
       </div>
       

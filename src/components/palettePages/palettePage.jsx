@@ -4,8 +4,9 @@ import Palette from "../../pallete.json";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import sound from "../../sound.mp3"
 
-export default function MaterialPage() {
-    const selectedPalette = Palette.find((palette) => palette.paletteName === "Flat UI Colors American");
+export default function MaterialPage(props) {
+    const{paletteName="string"} = props
+    const selectedPalette = Palette.find((palette) => palette.paletteName === paletteName);
     const colors = selectedPalette.colors;
 
     const [copiedBlocks, setCopiedBlocks] = useState(new Set());
@@ -84,7 +85,7 @@ export default function MaterialPage() {
                                 bottom: 0,
                                 right: 0,
                                 padding: '4px',
-                                color: '#fff',
+                                color:(color.color==="#fff")?'#c9c1c6':'#fff',
                                 fontSize: '20px',
                                 textTransform: "uppercase",
                                 fontWeight: "bold"
@@ -111,7 +112,7 @@ export default function MaterialPage() {
                         transform: 'translate(-50%, -50%)', 
                         textAlign: 'center', 
                         fontSize:"36px",
-                        color: '#fff' }}>
+                        color: (modalColor.color==="#fff")?'#c9c1c6':'#fff' }}>
                         <h2>{modalColor.name.toUpperCase()}</h2>
                         <p>{modalColor.color}</p>
                         

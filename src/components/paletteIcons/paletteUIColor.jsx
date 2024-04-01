@@ -1,8 +1,11 @@
 import React from "react";
 import Palette from "../../pallete.json";
 
-export default function MaterialUIColor() {
-  const selectedPalette = Palette.find((palette) => palette.paletteName === "Flat UI Colors Aussie");
+export default function MaterialUIColor(props) {
+
+  const {paletteName="string"} = props
+
+  const selectedPalette = Palette.find((palette) => palette.paletteName === paletteName);
   const colors = selectedPalette.colors;
 
   return (
@@ -24,14 +27,13 @@ export default function MaterialUIColor() {
           ))}
         </div>
         <div style={{
-          fontSize:"18px",
-          color:"black",
-          fontWeight:"600",
-          width:"100%",
-          float:"left",
-          textAlign:"left",
-          margin:"5px"
-          
+          fontSize: "18px",
+          color: "black",
+          fontWeight: "600",
+          width: "100%",
+          float: "left",
+          textAlign: "left",
+          margin: "5px"
         }}>
           {selectedPalette.paletteName}
           <span role="img" aria-label="palette" style={{ textAlign: "right", display: "block", marginTop:"-25px" }}>{selectedPalette.emoji}</span>
